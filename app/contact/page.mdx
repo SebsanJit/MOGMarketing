@@ -1,0 +1,43 @@
+// path: app/contact/page.mdx
+export const title = 'Contact'
+export const description = 'Talk to Mog Marketing — 24–48h response.'
+
+{/* TOC disabled via _meta.json */}
+
+# Book a Discovery Call
+
+We typically reply within **24–48 hours**.
+
+<form action="https://formspree.io/f/your-form-id" method="POST">
+  <input type="hidden" name="source" value="mogmarketing.com/contact" />
+  <div className="grid gap-3">
+    <label>
+      <span>Name</span>
+      <input className="nx-input" type="text" name="name" required />
+    </label>
+    <label>
+      <span>Email</span>
+      <input className="nx-input" type="email" name="email" required />
+    </label>
+    <label>
+      <span>Website</span>
+      <input className="nx-input" type="url" name="website" placeholder="https://…" />
+    </label>
+    <label>
+      <span>Monthly ad spend</span>
+      <select className="nx-input" name="ad_spend">
+        <option value="under-5k">Under $5k</option>
+        <option value="5k-20k">$5k–$20k</option>
+        <option value="20k-100k">$20k–$100k</option>
+        <option value="100k-plus">$100k+</option>
+      </select>
+    </label>
+    <label>
+      <span>Message</span>
+      <textarea className="nx-textarea" name="message" rows={5} required />
+    </label>
+    <button className="nx-btn nx-btn-primary" type="submit">Send</button>
+  </div>
+</form>
+
+> Prefer to schedule? Use our Calendly: **(add link)**
