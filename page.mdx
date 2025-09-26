@@ -1,0 +1,58 @@
+// path: app/page.mdx
+import Hero from '@/components/Hero'
+import LogoRow from '@/components/LogoRow'
+import StatBar from '@/components/StatBar'
+import ServiceCard from '@/components/ServiceCard'
+import Testimonial from '@/components/Testimonial'
+import CTASection from '@/components/CTASection'
+
+export const title = 'Home'
+export const description = 'Modern growth for ambitious brands.'
+
+{/* Hide TOC on home via _meta.json (theme.toc: false) */}
+
+<Hero
+  title="Modern growth for ambitious brands."
+  subtitle="Paid social, performance creative, and conversion strategy that actually compounds."
+  primaryHref="/contact"
+  primaryLabel="Book a Discovery Call"
+  secondaryHref="/work"
+  secondaryLabel="See Our Work"
+/>
+
+<LogoRow />
+
+<StatBar stats={[
+  { label: 'Avg. ROAS', value: '3.2x' },
+  { label: 'CPAs ↓', value: '27%' },
+  { label: 'Q/Q Revenue ↑', value: '180%' }
+]} />
+
+## What we do
+
+<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <ServiceCard title="Paid Social & UGC Ads" href="/services/paid-social"
+    summary="UGC pipelines, meta + TikTok buying, and creative iteration." />
+  <ServiceCard title="Performance Creative & CRO" href="/services/performance-creative"
+    summary="Concept → script → edit → test. Landing pages that convert." />
+  <ServiceCard title="Full-Funnel Strategy" href="/services/strategy"
+    summary="From awareness to LTV, we map journeys that compound." />
+</div>
+
+## Recent work
+
+- [Aurora Skincare → 3.8x ROAS in 6 weeks](/work/case-study-aurora)
+- [Ridge Fitness → CPA ↓ 33% with UGC + CRO](/work/case-study-ridge)
+
+<Testimonial
+  quote="The fastest experimentation loop we’ve had with any agency."
+  author="Jamie L."
+  role="Head of Growth, Aurora"
+/>
+
+<CTASection
+  title="Ready to accelerate growth?"
+  subtitle="Book a discovery call — we’ll audit, prioritize, and map a plan."
+  href="/contact"
+  label="Book a Discovery Call"
+/>
